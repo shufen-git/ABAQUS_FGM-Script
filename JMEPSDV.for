@@ -49,9 +49,9 @@ C-------Compute and save the properties of the FGM as state dependent variable--
 	STATEV(2)=Vm		! SDV2=Volume fraction of metal
 	STATEV(3)=E_fgm		! SDV3=Young's modulus of FGM
 	STATEV(4)=nu_fgm	! SDV4=Poisson's ratio of FGM
-	STATEV(5)=sy_fgm	! SDV5=Volume fraction of metal
-	STATEV(6)=alpha_fgm	! SDV6=Volume fraction of metal
-	STATEV(7)=k_fgm		! SDV7=Volume fraction of metal
+	STATEV(5)=sy_fgm	! SDV5=Yield stress of FGM
+	STATEV(6)=alpha_fgm	! SDV6=Coefficient of thermal expansion of FGM
+	STATEV(7)=k_fgm		! SDV7=Conductivity fraction of FGM
 	
 C---------------------------------------------------------------------------------------
 
