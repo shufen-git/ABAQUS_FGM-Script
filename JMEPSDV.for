@@ -1,4 +1,4 @@
-C    ABAQUS Subroutine for functionally graded material (FGM) in a cartesian coordinate system 2D
+C    USDFLD Subroutine for implementing properties of functionally graded material (FGM)
 
 	SUBROUTINE USDFLD(FIELD,STATEV,PNEWDT,DIRECT,T,CELENT,
 	1 TIME,DTIME,CMNAME,ORNAME,NFIELD,NSTATV,NOEL,NPT,LAYER,
@@ -15,8 +15,8 @@ C
 	
 C------------------------------Start of USER code----------------------------------------
 	r = COORD(1)				! read x, y, z coordinate
-	FIELD(1) = r				!define radius as the field variable
-C----------------------------------------------------------------------------------------
+	FIELD(1) = r				! define radius as the field variable
+C-------------------------- Material properties of metal and ceramic ---------------------------------
 	a=0.01
 	b=0.03
 	thickness=b-a
