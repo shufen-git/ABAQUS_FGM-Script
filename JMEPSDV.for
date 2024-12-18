@@ -14,7 +14,7 @@ C
 	real :: V0,Vc,Vm,E_fgm,alpha_fgm,nu_fgm,k_fgm,sy_fgm
 	
 C------------------------------Start of USER code----------------------------------------
-	r = COORD(1)				! read x, y, z coordinate
+	r = COORD(1)				! access x, y, z coordinate
 	FIELD(1) = r				! define radius as the field variable
 C-------------------------- Material properties of metal and ceramic ---------------------------------
 	a=0.01
@@ -45,13 +45,13 @@ C-------Compute and save the properties of the FGM as state dependent variable--
 	alpha_fgm=alpham*(1-Vc) + alphac*Vc
 	k_fgm=km*(1-Vc) + kc*Vc
 
-	STATEV(1)=Vc
-	STATEV(2)=Vm
-	STATEV(3)=E_fgm
-	STATEV(4)=nu_fgm
-	STATEV(5)=sy_fgm
-	STATEV(6)=alpha_fgm
-	STATEV(7)=k_fgm
+	STATEV(1)=Vc		! SDV1=Volume fraction of ceramic
+	STATEV(2)=Vm		! SDV2=Volume fraction of metal
+	STATEV(3)=E_fgm		! SDV3=Young's modulus of FGM
+	STATEV(4)=nu_fgm	! SDV4=Poisson's ratio of FGM
+	STATEV(5)=sy_fgm	! SDV5=Volume fraction of metal
+	STATEV(6)=alpha_fgm	! SDV6=Volume fraction of metal
+	STATEV(7)=k_fgm		! SDV7=Volume fraction of metal
 	
 C---------------------------------------------------------------------------------------
 
