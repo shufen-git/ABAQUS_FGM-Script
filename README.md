@@ -14,7 +14,7 @@ The script is designed to define material properties that vary along the radial 
 
 ## Requirements
 
-- Abaqus/CAE: Version 6.13 (Should work on higher versions)
+- ABAQUS/CAE: Version 6.13 (Should work on higher versions)
 - Python: The script is compatible with Abaqus Python environment (typically Python 3)
 
 ## How to Use
@@ -27,15 +27,14 @@ The script is designed to define material properties that vary along the radial 
 - Open the script in a text editor. (Eg. Notepad++, Visual Studio, Vim)
 - Edit the following key parameters to match your simulation setup:
 ```
-a=0.01					      # Inner radius  
-b=0.03					      # Outer radius  
-l=0.06					      # Half length of the cylinder  
-t=b-a					        # Thickness  
-  
-meshradial=50		      # Elements along radial direction  
-meshlength=20		      # Elements along axial direction  
-bias=5				        # Bias factor  
-maxincrement=0.01	    # Increment  
+a=0.01
+b=0.03	
+l=0.06
+t=b-a 
+meshradial=50
+meshlength=20
+bias=5
+maxincrement=0.01
 ```
 ### ----------------------- This part is optional ----------------------------
 
