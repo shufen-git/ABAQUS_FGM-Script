@@ -25,7 +25,7 @@ session.journalOptions.setValues(replayGeometry=COORDINATE, recoverGeometry=COOR
 BaseDir = os.getcwd()
 
 ################################## Define geometry #############################################
-
+# All Units in SI
 a=0.01					# Inner radius
 b=0.03					# Outer radius
 l=0.06					# Half length of the cylinder
@@ -33,16 +33,17 @@ t=b-a					# Thickness
 ################################# Create Model function ########################################
 def CreateModel(i):
 	
-	Ta=20				# Inner wall temperature
-	Tb=200				# Outer wall temperature
+	Ta=20				# Inner wall temperature (in deg Celcius)
+	Tb=200				# Outer wall temperature (in deg Celcius)
+	
 ##########################################################################################
-	meshradial=50		# Elements along radial direction
-	meshlength=20		# Elements along axial direction
+	meshradial=50			# Elements along radial direction
+	meshlength=20			# Elements along axial direction
 	bias=5				# Bias factor
-	maxincrement=0.01	# Increment
+	maxincrement=0.01		# Increment
 ##########################################################################################
-	model_name = "Model "+str(i)  # Generate model name
-	mdb.Model(name=model_name)  # Create model with the generated name
+	model_name = "Model "+str(i)  	# Generate model name
+	mdb.Model(name=model_name)  	# Create model with the generated name
 	mdb.models[model_name].ConstrainedSketch(name='__profile__', sheetSize=1.0)
 	mdb.models[model_name].sketches['__profile__'].sketchOptions.setValues(
 		viewStyle=AXISYM)
