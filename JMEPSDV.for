@@ -16,7 +16,10 @@ C
 C------------------------------Start of USER code----------------------------------------
 	r = COORD(1)				! access x, y, z coordinate
 	FIELD(1) = r				! define radius as the field variable
-C-------------------------- Material properties of metal and ceramic ---------------------------------
+
+ 
+C-------------------------- Material properties of metal and ceramic -------------------------------------------
+C--- This part of the subroutine is optional if it is not needed to obtain the material properties as outputs ---
 	a=0.01
 	b=0.03
 	thickness=b-a
@@ -34,7 +37,7 @@ C-------------------------- Material properties of metal and ceramic -----------
 	kc=100
 	alphac=4.3e-6
 	q=91.6e9
-
+ 
 C-------Compute and save the properties of the FGM as state dependent variable-------
 	
 	Vc= V0*(((r-a)/thickness)**n)
@@ -52,7 +55,6 @@ C-------Compute and save the properties of the FGM as state dependent variable--
 	STATEV(5)=sy_fgm	! SDV5=Yield stress of FGM
 	STATEV(6)=alpha_fgm	! SDV6=Coefficient of thermal expansion of FGM
 	STATEV(7)=k_fgm		! SDV7=Conductivity fraction of FGM
-	
 C---------------------------------------------------------------------------------------
 
 C 	End of USER code
