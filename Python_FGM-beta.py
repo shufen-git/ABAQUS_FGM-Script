@@ -14,21 +14,23 @@ from connectorBehavior import *
 import numpy as np
 import os
 from abaqusConstants import *
+
 ################################## Set working directory #############################################
 
 os.chdir(r"C:\Temp\JMEP")
 
-###################################  VERY IMPORTANT ##################################
+##########################  Map points in geometry to cordinates in workspace ########################
 
 session.journalOptions.setValues(replayGeometry=COORDINATE, recoverGeometry=COORDINATE)
 BaseDir = os.getcwd()
 
-################################## Create a new model #############################################
+################################## Define geometry #############################################
+
 a=0.01					# Inner radius
 b=0.03					# Outer radius
 l=0.06					# Half length of the cylinder
 t=b-a					# Thickness
-
+################################# Create Model function ########################################
 def CreateModel(i):
 	
 	Ta=20				# Inner wall temperature
