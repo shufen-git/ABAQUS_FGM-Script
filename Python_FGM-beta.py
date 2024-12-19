@@ -124,6 +124,7 @@ def CreateModel(i):
 		0.025789473684210522], [150000000.0, 0, 0.026842105263157889], 
 		[150000000.0, 0, 0.027894736842105257], [150000000.0, 0, 
 		0.028947368421052624], [150000000.0, 0, 0.029999999999999999]])
+	mdb.models[model_name].materials['Material-1'].Depvar(n=7)
 	######################## SectionAssignment ################################
 
 	mdb.models[model_name].HomogeneousSolidSection(material='Material-1', name=
