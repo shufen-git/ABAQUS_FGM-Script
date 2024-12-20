@@ -2,12 +2,11 @@
 
 ## Overview
 
-This Python script implements functionally graded material (FGM) behavior in Abaqus for analyzing the autofrettage process of a cylinder
-The script is designed to define material properties that vary along the radial direction of the cylinder and automate key steps in the simulation process
+This Python script implements functionally graded material (FGM) behavior in ABAQUS® for analyzing the autofrettage process of a cylinder. The script is designed to define material properties that vary along the radial direction of the cylinder and automate key steps in the simulation process.
 
 ## Features
 
-- Automates the creation of models in ABAQUS
+- Automates the creation of models in ABAQUS®
 - Defines material properties as a function of radial distance
 - Supports the simulation of the autofrettage process, including elastic and plastic zones
 - Includes customizable parameters for cylinder geometry, and loading conditions
@@ -16,6 +15,9 @@ The script is designed to define material properties that vary along the radial 
 
 - ABAQUS/CAE: Version 6.13 (Should work on higher versions)
 - Python: The script is compatible with Abaqus Python environment (typically Python 3)
+- Inter(R) Visual Fortran Compiler Ver. 11.1.051 (Should work on higher versions)
+- Microsoft Visual Studio 2008 (Should work on higher versions)  
+- ABAQUS® must be linked with the Visual Fortran Compiler for Subroutine capability  
 
 ## How to Use
 
@@ -39,7 +41,7 @@ maxincrement=0.01
 ### ----------------------- This part is optional ----------------------------
 
 * To obtain the material properties of the FGM in the output database  
-* Go to ABAQUS GUI  
+* Go to ABAQUS® GUI  
 * Go to Model > Keywords > Edit Keywords
 * Scroll down and find the following
 ```
