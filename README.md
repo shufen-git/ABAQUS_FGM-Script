@@ -1,4 +1,4 @@
-# Functionally Graded Material Script (Beta version) for ABAQUS
+# Functionally Graded Material Script for ABAQUS
 
 ## Overview
 
